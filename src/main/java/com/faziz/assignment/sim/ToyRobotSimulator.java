@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class ToyRobotSimulator {
-    
+
+    /** Simulator command handler mapping. */
     private final Map<String, Function<String, Boolean>> commandHandlers;
 
     public ToyRobotSimulator() {
