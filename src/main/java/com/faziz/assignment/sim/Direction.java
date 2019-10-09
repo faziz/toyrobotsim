@@ -72,13 +72,21 @@ public enum Direction {
     };
 
     /**
-     * Calculates new position relative to the current position and direction.
+     * Calculates new position relative to the current position.
      * @param currentPosition
      * @return 
      */
     public abstract Point newPosition(Point currentPosition);
     
+    /**
+     * Determines the new direction when the robot is rotated left off current direction.
+     * @return 
+     */
     public abstract Direction rotateLeft();
     
+    /**
+     * Determines the new direction when the robot is rotated right off current direction.
+     * @return 
+     */
     public abstract Direction rotateRight();
 }
