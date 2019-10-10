@@ -30,12 +30,12 @@ public enum Direction {
 
         @Override
         public Direction rotateLeft() {
-           return WEST;
+           return EAST;
         }
 
         @Override
         public Direction rotateRight() {
-            return EAST;
+            return WEST;
         }
     }, 
     EAST {

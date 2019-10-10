@@ -30,7 +30,7 @@ public class RobotTest {
     }
 
     /**
-     * Test of move method, of class Robot.
+     * Test of newPosition method, of class Robot.
      */
     @Test
     public void testMove() {

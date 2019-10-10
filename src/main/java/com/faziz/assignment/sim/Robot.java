@@ -17,7 +17,11 @@ public class Robot {
     }
 
     public Boolean move() {
-        return tableTop.move(direction);
+        return tableTop.newPosition(direction);
+    }
+    
+    public Boolean move(Integer x, Integer y) {
+        return this.tableTop.setCurrentPosition(x, y);
     }
 
     public Direction getDirection() {

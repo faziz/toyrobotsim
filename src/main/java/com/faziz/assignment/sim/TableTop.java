@@ -14,23 +14,23 @@ public class TableTop {
 
     public Boolean setCurrentPosition(Integer x, Integer y) {
         Point p = new Point(x, y);
-        Boolean moveAllowed = moveAllowed(p);
+        Boolean moveAllowed = positionAllowed(p);
         if (moveAllowed) {
             this.currentPosition = p;
         }
         return moveAllowed;
     }
 
-    public Boolean move(Direction newDirection) {
-        Point newPosition = newDirection.newPosition(currentPosition);
-        Boolean moveAllowed = moveAllowed(newPosition);
+    public Boolean newPosition(Direction direction) {
+        Point newPosition = direction.newPosition(currentPosition);
+        Boolean moveAllowed = positionAllowed(newPosition);
         if (moveAllowed) {
             this.currentPosition = newPosition;
         }
         return moveAllowed;
     }
 
-    private Boolean moveAllowed(Point newPosition) {
+    private Boolean positionAllowed(Point newPosition) {
         return newPosition.between(basePosition, allowedLocation);
     }
 

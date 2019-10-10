@@ -24,13 +24,13 @@ public class TableTopTest {
     @Test
     public void testMoveEast_isValid() {
         Point expectedCurrentPosition = new Point(1, 0);
-        Boolean successfull = tableTop.move(EAST);
+        Boolean successfull = tableTop.newPosition(EAST);
         assertTrue(successfull);
         Point result = tableTop.getCurrentPosition();
         assertEquals(expectedCurrentPosition, result);
         
         expectedCurrentPosition = new Point(2, 0);
-        successfull = tableTop.move(EAST);
+        successfull = tableTop.newPosition(EAST);
         assertTrue(successfull);
         result = tableTop.getCurrentPosition();
         assertEquals(expectedCurrentPosition, result);
@@ -39,13 +39,13 @@ public class TableTopTest {
     @Test
     public void testMoveNorth_isValid() {
         Point expectedCurrentPosition = new Point(0, 1);
-        Boolean successfull = tableTop.move(NORTH);
+        Boolean successfull = tableTop.newPosition(NORTH);
         assertTrue(successfull);
         Point result = tableTop.getCurrentPosition();
         assertEquals(expectedCurrentPosition, result);
         
         expectedCurrentPosition = new Point(0, 0);
-        successfull = tableTop.move(SOUTH);
+        successfull = tableTop.newPosition(SOUTH);
         assertTrue(successfull);
         result = tableTop.getCurrentPosition();
         assertEquals(expectedCurrentPosition, result);

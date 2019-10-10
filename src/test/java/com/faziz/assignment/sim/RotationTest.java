@@ -40,13 +40,13 @@ public class RotationTest {
     @Test
     public void testRotate_SOUTH() {
         Direction direction = SOUTH;
-        Direction expResult = WEST;
+        Direction expResult = EAST;
         Rotation rotation = LEFT;
         Direction result = rotation.rotate(direction);
         assertEquals(expResult, result);
         
         direction = SOUTH;
-        expResult = EAST;
+        expResult = WEST;
         rotation = RIGHT;
         result = rotation.rotate(direction);
         assertEquals(expResult, result);
