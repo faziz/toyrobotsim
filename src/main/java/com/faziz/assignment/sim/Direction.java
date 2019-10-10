@@ -2,7 +2,6 @@ package com.faziz.assignment.sim;
 
 /**
  * An enumeration to be used as a command to the robot for the direction.
- * @author faisal
  */
 public enum Direction {
 
