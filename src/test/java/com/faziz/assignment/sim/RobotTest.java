@@ -1,5 +1,8 @@
 package com.faziz.assignment.sim;
 
+import static com.faziz.assignment.sim.Direction.*;
+import static com.faziz.assignment.sim.Rotation.*;
+import static java.lang.Boolean.*;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -19,9 +22,9 @@ public class RobotTest {
      */
     @Test
     public void testRotate() {
-        System.out.println("rotate");
-        Rotation rotation = null;
-        Direction expResult = null;
+        robot = new Robot(NORTH, tableTop);
+        Rotation rotation = LEFT;
+        Direction expResult = WEST;
         Direction result = robot.rotate(rotation);
         assertEquals(expResult, result);
     }
@@ -31,7 +34,7 @@ public class RobotTest {
      */
     @Test
     public void testMove() {
-        Boolean expResult = null;
+        Boolean expResult = TRUE;
         Boolean result = robot.move();
         assertEquals(expResult, result);
     }
