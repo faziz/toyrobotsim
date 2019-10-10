@@ -49,7 +49,7 @@ public class ToyRobotSimulator {
     private List<String> robotCommands() throws IOException {
         try (BufferedReader reader = loadReader()) {
             return reader.lines().
-                map(cmd -> cmd.trim()).
+                map(String::trim).
                     filter(cmd -> !cmd.isEmpty()).
                         collect(toList());
         }
