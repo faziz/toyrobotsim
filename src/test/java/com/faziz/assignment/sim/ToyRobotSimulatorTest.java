@@ -13,5 +13,5 @@ public class ToyRobotSimulatorTest {
         assertTrue(sim.canHandle("RIGHT"));
         assertTrue(sim.canHandle("MOVE"));
     }
-    
+
 }
