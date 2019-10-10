@@ -3,20 +3,25 @@ package com.faziz.assignment.sim;
 
 public class Robot {
     
+    private Direction direction;
+    private final TableTop tableTop;
+    
     public Robot(Direction direction, TableTop tableTop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.direction = direction;
+        this.tableTop = tableTop;
     }
 
     public Direction rotate(Rotation rotation) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.direction = rotation.rotate(direction);
+        return this.direction;
     }
 
     public Boolean move() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return tableTop.move(direction);
     }
 
     public Direction getDirection() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return direction;
     }
     
 }

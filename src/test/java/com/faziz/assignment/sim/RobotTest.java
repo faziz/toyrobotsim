@@ -51,5 +51,4 @@ public class RobotTest {
         Direction direction = robot.rotate(RIGHT);
         assertEquals(EAST, direction);
     }
-    
 }
