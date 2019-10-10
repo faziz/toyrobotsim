@@ -4,6 +4,9 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Stream.of;
 
+/**
+ * Validates the PLACE command and it's arguments.
+ */
 public class PlaceCommandValidator {
     
     private final String placeCommand;

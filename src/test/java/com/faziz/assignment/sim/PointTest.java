@@ -12,7 +12,7 @@ public class PointTest {
     public void testBetween_base00() {
         Point point = new Point(1, 2);
         Boolean expResult = true;
-        Boolean result = point.between(point1, point2);
+        Boolean result = point.isBetween(point1, point2);
         assertEquals(expResult, result);
     }
     
@@ -20,11 +20,11 @@ public class PointTest {
     public void testBetween_base00_Y_Outlier() {
         Point point = new Point(1, 6);
         Boolean expResult = false;
-        Boolean result = point.between(point1, point2);
+        Boolean result = point.isBetween(point1, point2);
         assertEquals(expResult, result);
         
         point = new Point(1, -5);
-        result = point.between(point1, point2);
+        result = point.isBetween(point1, point2);
         assertEquals(expResult, result);
     }
     
@@ -32,11 +32,11 @@ public class PointTest {
     public void testBetween_base00_X_Outlier() {
         Point point = new Point(11, 4);
         Boolean expResult = false;
-        Boolean result = point.between(point1, point2);
+        Boolean result = point.isBetween(point1, point2);
         assertEquals(expResult, result);
         
         point = new Point(-1, 4);
-        result = point.between(point1, point2);
+        result = point.isBetween(point1, point2);
         assertEquals(expResult, result);
     }
 }

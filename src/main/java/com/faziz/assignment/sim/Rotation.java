@@ -1,6 +1,10 @@
 package com.faziz.assignment.sim;
 
+/**
+ * Abstraction for the rotation of the robot.
+ */
 public enum Rotation {
+
     LEFT {
         @Override
         public Direction rotate(Direction direction) {

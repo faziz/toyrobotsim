@@ -31,7 +31,7 @@ public class TableTop {
     }
 
     private Boolean positionAllowed(Point newPosition) {
-        return newPosition.between(basePosition, allowedLocation);
+        return newPosition.isBetween(basePosition, allowedLocation);
     }
 
     public Point getCurrentPosition() {
