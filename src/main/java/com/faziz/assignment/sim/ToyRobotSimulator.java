@@ -44,6 +44,13 @@ public class ToyRobotSimulator {
     }
     
     private Boolean placeHandler(String cmd) {
+        PlaceCommandValidator v = new PlaceCommandValidator(cmd);
+        Boolean isValidCommand = v.validate();
+        
+        if (!isValidCommand) {
+            return isValidCommand;
+        }
+        
         String[] cmdParams = cmd.split(" ")[1].split(",");
         Integer x = Integer.valueOf(cmdParams[0].trim());
         Integer y = Integer.valueOf(cmdParams[1].trim());

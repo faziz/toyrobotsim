@@ -13,5 +13,32 @@ public class PlaceCommandValidatorTest {
         Boolean result = v.validate();
         Boolean expectedResult = TRUE;
         assertEquals(expectedResult, result);
+        
+        v = new PlaceCommandValidator("PLACE 0,0,SOUTH");
+        result = v.validate();
+        expectedResult = TRUE;
+        assertEquals(expectedResult, result);
+        
+        v = new PlaceCommandValidator("PLACE");
+        result = v.validate();
+        expectedResult = FALSE;
+        assertEquals(expectedResult, result);
+        
+        v = new PlaceCommandValidator("PLACE 0");
+        result = v.validate();
+        expectedResult = FALSE;
+        assertEquals(expectedResult, result);
+        
+        v = new PlaceCommandValidator("PLACE 0,0");
+        result = v.validate();
+        expectedResult = FALSE;
+        assertEquals(expectedResult, result);
+        
+        v = new PlaceCommandValidator("PLACE X,0,NORTH");
+        result = v.validate();
+        expectedResult = FALSE;
+        assertEquals(expectedResult, result);
+        
+        
     }
 }
