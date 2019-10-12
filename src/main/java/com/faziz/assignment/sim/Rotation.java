@@ -8,13 +8,13 @@ public enum Rotation {
     LEFT {
         @Override
         public Direction rotate(Direction direction) {
-            return direction.rotateLeft();
+            return direction.left();
         }
     },
     RIGHT {
         @Override
         public Direction rotate(Direction direction) {
-            return direction.rotateRight();
+            return direction.right();
         }
     };
     

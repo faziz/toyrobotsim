@@ -12,12 +12,12 @@ public enum Direction {
         }
 
         @Override
-        public Direction rotateLeft() {
+        public Direction left() {
             return WEST;
         }
 
         @Override
-        public Direction rotateRight() {
+        public Direction right() {
             return EAST;
         }
     }, 
@@ -28,12 +28,12 @@ public enum Direction {
         }
 
         @Override
-        public Direction rotateLeft() {
+        public Direction left() {
            return EAST;
         }
 
         @Override
-        public Direction rotateRight() {
+        public Direction right() {
             return WEST;
         }
     }, 
@@ -44,12 +44,12 @@ public enum Direction {
         }
 
         @Override
-        public Direction rotateLeft() {
+        public Direction left() {
             return NORTH;
         }
 
         @Override
-        public Direction rotateRight() {
+        public Direction right() {
             return SOUTH;
         }
     }, 
@@ -60,12 +60,12 @@ public enum Direction {
         }
 
         @Override
-        public Direction rotateLeft() {
+        public Direction left() {
             return SOUTH;
         }
 
         @Override
-        public Direction rotateRight() {
+        public Direction right() {
             return NORTH;
         }
     };
@@ -81,11 +81,11 @@ public enum Direction {
      * Determines the new direction when the robot is rotated left off current direction.
      * @return 
      */
-    public abstract Direction rotateLeft();
+    public abstract Direction left();
     
     /**
      * Determines the new direction when the robot is rotated right off current direction.
      * @return 
      */
-    public abstract Direction rotateRight();
+    public abstract Direction right();
 }
