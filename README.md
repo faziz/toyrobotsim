@@ -14,7 +14,12 @@ To run the application .
 ```sh
 $ ./gradlew clean test run
 ```
-This would run all tests, and then execute the main application. 
+You might need to make the gradlew shell script executable by running **chmod +x gradlew**.
+
+On Windows please use **gradlew.bat** file to run the application.
+
+The above command would run all tests, and then execute the main application.
+
 **com.faziz.assignment.sim.ToyRobotSimulator** is the entry point for the application.
 The application loads the commands for the robot from **src/main/resources/robot-commands.txt** file.
 
