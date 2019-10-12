@@ -50,8 +50,9 @@ public class ToyRobotSimulator {
         try (BufferedReader reader = loadReader()) {
             return reader.lines().
                 map(String::trim).
-                    filter(cmd -> !cmd.isEmpty()).
-                        collect(toList());
+                    map(String::toUpperCase).
+                        filter(cmd -> !cmd.isEmpty()).
+                            collect(toList());
         }
     }
 
