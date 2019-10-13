@@ -40,15 +40,15 @@ public class ToyRobotSimulator {
     public static void main(String[] args) throws IOException {
         ToyRobotSimulator sim = new ToyRobotSimulator();
         //Load robot commands and run each of them one-by-one.
-        sim.robotCommands().forEach(sim::handleCommand);
+        sim.robotCommands("/robot-commands.txt").forEach(sim::handleCommand);
     }
     
     /**
      * @return Returns list of commands for the robot.
      * @throws IOException 
      */
-    private List<String> robotCommands() throws IOException {
-        try (BufferedReader reader = loadReader()) {
+    private List<String> robotCommands(final String fileName) throws IOException {
+        try (BufferedReader reader = loadReader(fileName)) {
             return reader.lines().
                 map(String::trim).
                     map(String::toUpperCase).
@@ -60,10 +60,10 @@ public class ToyRobotSimulator {
     /**
      * @return Reader based on the command file on the classpath.
      */
-    private BufferedReader loadReader() {
+    private BufferedReader loadReader(final String fileName) {
         return new BufferedReader(
             new InputStreamReader(
-                this.getClass().getResourceAsStream("/robot-commands.txt")));
+                this.getClass().getResourceAsStream(fileName)));
     }
     
     /**
