@@ -35,6 +35,7 @@ public class ToyRobotSimulator {
     
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         ToyRobotSimulator sim = new ToyRobotSimulator();
@@ -107,7 +108,7 @@ public class ToyRobotSimulator {
     }
     
     /**
-     * Issues move instruction to the robot in the direction the robot is in. Thr robot would stay
+     * Issues move instruction to the robot in the direction the robot is in. The robot would stay
      * on it's current position, if the move could mean the new position is beyond the table top.
      * @param cmd
      * @return 
